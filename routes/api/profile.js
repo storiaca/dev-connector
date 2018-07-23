@@ -26,6 +26,7 @@ router.get(
     const errors = {};
 
     Profile.findOne({ user: req.user.id })
+      .populate('user', ['name', 'avatar'])
       .then(profile => {
         if(!profile) {
           errors.noprofile = 'There is no profile for this user';
@@ -90,7 +91,7 @@ router.post(
 
           // Check if handle exists
           Profile.findOne({ handle: profileFields.handle })
-            .then(profile=> {
+            .then(profile => {
               if(profile) {
                 errors.handle = 'That handle already exists';
                 res.status(400).json(errors);
