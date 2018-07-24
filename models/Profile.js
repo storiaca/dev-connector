@@ -3,7 +3,7 @@ const Schema = mongoose.Schema;
 
 // Create Schema
 
-const ProfileChema = new Schema({
+const ProfileSchema = new Schema({
   user: {
     type: Schema.Types.ObjectId,
     ref: 'users'
@@ -118,4 +118,4 @@ const ProfileChema = new Schema({
   }
 });
 
-module.exports = Profile = mongoose.model('profile', ProfileChema);
+module.exports = Profile = mongoose.model('profile', ProfileSchema);
