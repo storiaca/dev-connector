@@ -61,7 +61,7 @@ class CreateProfile extends Component {
       profile.youtube = !isEmpty(profile.social.youtube) ? profile.social.youtube : '';
       profile.instagram = !isEmpty(profile.social.instagram) ? profile.social.instagram : '';
 
-      // Set comoponent fields
+      // Set component fields
       this.setState({
         handle: profile.handle,
         company: profile.company,
