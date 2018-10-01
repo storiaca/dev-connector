@@ -5,7 +5,7 @@ import PropTypes from 'prop-types';
 class ProfileGithub extends Component {
   constructor(props) {
     super(props);
-    this.state ={
+    this.state = {
       clientId: '',
       clientSecret: '',
       count: 5,
